@@ -1,0 +1,143 @@
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<script>function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+</script>
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+<body bgcolor="#00FF80">
+<img src="http://www.clker.com/cliparts/H/Z/0/R/f/S/warning-icon-hi.png" height="70" width="70">
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: Gray;
+    clear: left;
+    text-align: center;
+}
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>Trojan Upload.io</h1>
+</header>
+<form action="Trojanupload.github.io/Trojanupload"
+enctype="multipart/form-data" method="post">
+<p>
+Upload Trojan:<br>
+<input type="text" name="textline" size="30">
+</p>
+<p>
+Please specify a file, or a set of files:<br>
+<input type="file" name="datafile" size="40">
+</p>
+<div>
+<input type="submit" value="Send">
+</div>
+</form>
+<script type="text/javascript" language="JavaScript">
+function check() {
+  var ext = document.f.pic.value;
+  ext = ext.substring(ext.length-3,ext.length);
+  ext = ext.toLowerCase();
+  if(ext != 'jpg') {
+    alert('You selected a .'+ext+
+          ' file; please select a .jpg file instead!');
+    return false; }
+  else
+    return true; }
+</script>
+
+<form method="post" name=f
+enctype="multipart/form-data"
+onsubmit="return check();"
+action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+<p>
+Please select a exe or bat (.exe) or (.bat) file to be sent:
+<br>
+<input type="file" name="exe" size="1GB"
+accept="file/exe">
+<input type="file" name="bat" size="1GB"
+accept="file/bat">
+<p>
+Please include a short explanation:<br>
+<textarea name="expl" rows="3" cols="40"
+onfocus="check();">
+</textarea>
+<p>
+<input type="submit" value="Send">
+</form>
+<div class="row">
+                                    <div class="col-md-12">
+                                        <hr>
+                                        <h2><i class="fa fa-comment"></i> Comment</h2>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="nameInput">Name</label>
+                                                    <input type="text" class="form-control" id="nameInput" placeholder="Enter name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="emailInput">Email Address</label>
+                                                    <input type="email" class="form-control" id="emailInput" placeholder="Enter email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="messageInput">Message</label>
+                                                    <textarea id="messageInput" class="form-control" rows="3">
